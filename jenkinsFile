@@ -1,0 +1,39 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Development') {
+            steps {
+                echo 'Hello Development'
+                bat 'git clone https://github.com/divkulkarni123/Demo.git'
+            }
+        }
+    
+        stage('QA') {
+            steps {
+                echo 'Hello QA'
+            }
+        }
+    
+   
+        stage('UAT') {
+            steps {
+                echo 'Hello UAT'
+            }
+        }
+    
+    
+        stage('Prod') {
+            steps {
+                echo 'Hello Prod'
+            }
+        }
+    
+   
+        stage('Pre-prod') {
+            steps {
+                echo 'Hello Pre-prod'
+            }
+        }
+    }
+}
